@@ -62,6 +62,7 @@ def run(frames_path:str, csv_path:str, save_path:str, frame_batch_size:int, fram
             
             # Transform the images to tensor
             sorted_replaced_sub_file_path = sorted(glob(os.path.join(frames_path, replaced_sub_file_path, "*")))
+            print("first file", sorted_replaced_sub_file_path[0], " second file ", sorted_replaced_sub_file_path[1])
             # Frame Sampler Mini-Batch
             for j in range(0, math.ceil(len(sorted_replaced_sub_file_path))):
                 sliced_sorted_replaced_sub_file_path = sorted_replaced_sub_file_path[j*frame_batch_size:(j+1)*frame_batch_size]
