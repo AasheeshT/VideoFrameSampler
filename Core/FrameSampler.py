@@ -87,7 +87,7 @@ def run(frames_path:str, csv_path:str, save_path:str, frame_batch_size:int, fram
                 "category": categories[label],
                 "index": indices.numpy().tolist()
             }
-            
+            print("ash")
             print(f"{i+1}/{len(labels)} Frame Path: {sub_file_path} Numbef of Frames: {len(sorted_replaced_sub_file_path)} Frame Sampling Complete !!")
             
         with open(json_path, "w") as f:
